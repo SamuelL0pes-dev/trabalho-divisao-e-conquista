@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "nome": "Apenas Negativos",
+    "justificativa": "Todos os valores negativos: deve retornar o elemento menos negativo.",
+    "n": 5,
+    "entrada": [-5, -2, -8, -12, -3],
+    "soma_esperada": -2,
+    "inicio_esperado": 1,
+    "fim_esperado": 1
+  },
+  {
+    "id": 2,
+    "nome": "Unitário Positivo",
+    "justificativa": "Vetor com 1 elemento positivo (caso base).",
+    "n": 1,
+    "entrada": [42],
+    "soma_esperada": 42,
+    "inicio_esperado": 0,
+    "fim_esperado": 0
+  },
+  {
+    "id": 3,
+    "nome": "Unitário Negativo",
+    "justificativa": "Vetor com 1 elemento negativo (caso base negativo).",
+    "n": 1,
+    "entrada": [-99],
+    "soma_esperada": -99,
+    "inicio_esperado": 0,
+    "fim_esperado": 0
+  },
+  {
+    "id": 4,
+    "nome": "Empates Mesma Soma",
+    "justificativa": "Dois intervalos com soma 3: criterio de menor comprimento e menor indice escolhe o primeiro.",
+    "n": 3,
+    "entrada": [3, -5, 3],
+    "soma_esperada": 3,
+    "inicio_esperado": 0,
+    "fim_esperado": 0
+  },
+  {
+    "id": 5,
+    "nome": "Clássico Cormen",
+    "justificativa": "Instancia canonica da literatura com 16 dias de cotacao.",
+    "n": 16,
+    "entrada": [13, -3, -25, 20, -3, -16, -23, 18, 20, -7, 12, -5, -22, 15, -4, 7],
+    "soma_esperada": 43,
+    "inicio_esperado": 7,
+    "fim_esperado": 10
+  },
+  {
+    "id": 6,
+    "nome": "Todos Positivos",
+    "justificativa": "Sem perdas diárias, intervalo maximo cobre todo o vetor.",
+    "n": 6,
+    "entrada": [10, 20, 30, 40, 50, 60],
+    "soma_esperada": 210,
+    "inicio_esperado": 0,
+    "fim_esperado": 5
+  },
+  {
+    "id": 7,
+    "nome": "Com Zeros",
+    "justificativa": "Zeros intermediários não devem dilatar o subarranjo mínimo.",
+    "n": 6,
+    "entrada": [0, -1, 0, 5, 0, -2],
+    "soma_esperada": 5,
+    "inicio_esperado": 3,
+    "fim_esperado": 3
+  },
+  {
+    "id": 8,
+    "nome": "Alternância",
+    "justificativa": "Subarranjo inicial ótimo compensa pequenas perdas.",
+    "n": 8,
+    "entrada": [5, -2, 8, -1, 10, -20, 4, 2],
+    "soma_esperada": 20,
+    "inicio_esperado": 0,
+    "fim_esperado": 4
+  }
+]

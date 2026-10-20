@@ -1,0 +1,144 @@
+================================================================================
+BATERIA DE CASOS DE TESTE - ETAPA 1: SUBARRANJO DE SOMA MÁXIMA
+================================================================================
+Trabalho Prático: Divisão e Conquista
+Critério: Testes (40% da nota) - Casos de borda justificados e saídas esperadas.
+
+Convenção de Índices: 0-indexed (índices iniciam em 0 e vão até n-1).
+Regra de Desempate: Se houver múltiplos intervalos com a mesma soma máxima,
+prioriza-se o de menor comprimento (fim - inicio + 1) e, persistindo o empate,
+o de menor índice inicial.
+
+--------------------------------------------------------------------------------
+CASO 1: Caso de Borda Obrigatório - Vetor com Apenas Números Negativos
+--------------------------------------------------------------------------------
+Justificativa:
+Quando todos os elementos são negativos, a soma de qualquer intervalo com mais de
+um número é menor do que selecionar individualmente o elemento de maior valor
+(menos negativo). O algoritmo não deve retornar 0 ou intervalo vazio, mas sim
+o elemento individual de maior valor (-2 no índice 1) e o intervalo [1, 1].
+
+Entrada:
+5
+-5 -2 -8 -12 -3
+
+Saída Esperada:
+Soma Maxima: -2
+Intervalo: [1, 1] (Inicio: 1, Fim: 1)
+Subarranjo: [-2]
+
+--------------------------------------------------------------------------------
+CASO 2: Caso de Borda Obrigatório - Vetor Unitário (Tamanho n = 1)
+--------------------------------------------------------------------------------
+Justificativa:
+O menor vetor válido tem exatamente 1 elemento. Serve como caso base da recursão
+de divisão e conquista (low == high). Deve retornar o próprio elemento e [0, 0].
+
+Entrada:
+1
+42
+
+Saída Esperada:
+Soma Maxima: 42
+Intervalo: [0, 0] (Inicio: 0, Fim: 0)
+Subarranjo: [42]
+
+--------------------------------------------------------------------------------
+CASO 3: Caso de Borda Obrigatório - Vetor Unitário Negativo
+--------------------------------------------------------------------------------
+Justificativa:
+Combina tamanho unitário com valor negativo para testar condição de parada e
+inicialização de variáveis em -infinito ou primeiro elemento.
+
+Entrada:
+1
+-99
+
+Saída Esperada:
+Soma Maxima: -99
+Intervalo: [0, 0] (Inicio: 0, Fim: 0)
+Subarranjo: [-99]
+
+--------------------------------------------------------------------------------
+CASO 4: Caso de Borda Obrigatório - Empates com Mesma Soma Máxima
+--------------------------------------------------------------------------------
+Justificativa:
+Vetor possui dois ou mais subarranjos distintos que totalizam a mesma soma ótima.
+No vetor [3, -5, 3], tanto o elemento no índice 0 quanto o elemento no índice 2
+possuem soma 3. Pelo critério de desempate determinístico (menor tamanho e menor
+índice inicial), a resposta deve ser o índice 0.
+
+Entrada:
+3
+3 -5 3
+
+Saída Esperada:
+Soma Maxima: 3
+Intervalo: [0, 0] (Inicio: 0, Fim: 0)
+Subarranjo: [3]
+
+--------------------------------------------------------------------------------
+CASO 5: Caso Clássico da Literatura (Cormen - Introduction to Algorithms)
+--------------------------------------------------------------------------------
+Justificativa:
+Exemplo canônico de oscilação no mercado de ações, combinando sequências de
+quedas e altas expressivas. O subarranjo ótimo cruza o meio e se estende
+do índice 7 ao 10 ([18, 20, -7, 12]), com soma acumulada de 43.
+
+Entrada:
+16
+13 -3 -25 20 -3 -16 -23 18 20 -7 12 -5 -22 15 -4 7
+
+Saída Esperada:
+Soma Maxima: 43
+Intervalo: [7, 10] (Inicio: 7, Fim: 10)
+Subarranjo: [18, 20, -7, 12]
+
+--------------------------------------------------------------------------------
+CASO 6: Vetor com Todos os Valores Positivos
+--------------------------------------------------------------------------------
+Justificativa:
+Quando nenhum elemento é negativo, qualquer extensão de intervalo soma positivamente.
+Portanto, a solução ótima é obrigatoriamente a totalidade do vetor [0, n-1].
+
+Entrada:
+6
+10 20 30 40 50 60
+
+Saída Esperada:
+Soma Maxima: 210
+Intervalo: [0, 5] (Inicio: 0, Fim: 5)
+Subarranjo: [10, 20, 30, 40, 50, 60]
+
+--------------------------------------------------------------------------------
+CASO 7: Vetor com Zeros Intermediários
+--------------------------------------------------------------------------------
+Justificativa:
+Testa se o algoritmo trata neutros aditivos sem estender indevidamente o tamanho
+mínimo do intervalo ótimo.
+
+Entrada:
+6
+0 -1 0 5 0 -2
+
+Saída Esperada:
+Soma Maxima: 5
+Intervalo: [3, 3] (Inicio: 3, Fim: 3)
+Subarranjo: [5]
+
+--------------------------------------------------------------------------------
+CASO 8: Alternância Simétrica de Ganhos e Perdas
+--------------------------------------------------------------------------------
+Justificativa:
+Vetor em que picos positivos são intercalados por vales de perdas menores, exigindo
+que o algoritmo avalie se compensa absorver perdas parciais para alcançar ganhos maiores.
+
+Entrada:
+8
+5 -2 8 -1 10 -20 4 2
+
+Saída Esperada:
+Soma Maxima: 20
+Intervalo: [0, 4] (Inicio: 0, Fim: 4)
+Subarranjo: [5, -2, 8, -1, 10]
+================================================================================
