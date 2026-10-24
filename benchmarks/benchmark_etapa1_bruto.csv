@@ -1,0 +1,106 @@
+etapa,algoritmo,tamanho_n,repeticao,tempo_segundos,resultado_soma
+Etapa 1,Forca Bruta O(n^2),100,1,0.000609200000326382,7888
+Etapa 1,Divisao e Conquista O(n log n),100,1,0.00019560000146157108,7888
+Etapa 1,Kadane O(n) [Desafio],100,1,1.9000002794200554e-05,7888
+Etapa 1,Forca Bruta O(n^2),100,2,0.0006052999997336883,3797
+Etapa 1,Divisao e Conquista O(n log n),100,2,0.000185500000952743,3797
+Etapa 1,Kadane O(n) [Desafio],100,2,1.7700000171316788e-05,3797
+Etapa 1,Forca Bruta O(n^2),100,3,0.000601499999902444,9616
+Etapa 1,Divisao e Conquista O(n log n),100,3,0.00018700000146054663,9616
+Etapa 1,Kadane O(n) [Desafio],100,3,1.720000000204891e-05,9616
+Etapa 1,Forca Bruta O(n^2),100,4,0.0006013999991409946,6421
+Etapa 1,Divisao e Conquista O(n log n),100,4,0.0001880999989225529,6421
+Etapa 1,Kadane O(n) [Desafio],100,4,1.710000287857838e-05,6421
+Etapa 1,Forca Bruta O(n^2),100,5,0.0006224999997357372,9986
+Etapa 1,Divisao e Conquista O(n log n),100,5,0.0001843999998527579,9986
+Etapa 1,Kadane O(n) [Desafio],100,5,1.7300000763498247e-05,9986
+Etapa 1,Forca Bruta O(n^2),200,1,0.0024241999999503605,6133
+Etapa 1,Divisao e Conquista O(n log n),200,1,0.0004009000003861729,6133
+Etapa 1,Kadane O(n) [Desafio],200,1,3.340000330354087e-05,6133
+Etapa 1,Forca Bruta O(n^2),200,2,0.0023443999998562504,13145
+Etapa 1,Divisao e Conquista O(n log n),200,2,0.0004031999997096136,13145
+Etapa 1,Kadane O(n) [Desafio],200,2,3.319999814266339e-05,13145
+Etapa 1,Forca Bruta O(n^2),200,3,0.002356199998757802,6192
+Etapa 1,Divisao e Conquista O(n log n),200,3,0.00039679999827058055,6192
+Etapa 1,Kadane O(n) [Desafio],200,3,3.239999932702631e-05,6192
+Etapa 1,Forca Bruta O(n^2),200,4,0.002354099997319281,8310
+Etapa 1,Divisao e Conquista O(n log n),200,4,0.0003892999993695412,8310
+Etapa 1,Kadane O(n) [Desafio],200,4,3.260000084992498e-05,8310
+Etapa 1,Forca Bruta O(n^2),200,5,0.0024648999969940633,7137
+Etapa 1,Divisao e Conquista O(n log n),200,5,0.0003859999997075647,7137
+Etapa 1,Kadane O(n) [Desafio],200,5,3.230000220355578e-05,7137
+Etapa 1,Forca Bruta O(n^2),400,1,0.01055130000167992,8795
+Etapa 1,Divisao e Conquista O(n log n),400,1,0.0008467999978165608,8795
+Etapa 1,Kadane O(n) [Desafio],400,1,6.990000110818073e-05,8795
+Etapa 1,Forca Bruta O(n^2),400,2,0.014538200000970392,18541
+Etapa 1,Divisao e Conquista O(n log n),400,2,0.0008410000009462237,18541
+Etapa 1,Kadane O(n) [Desafio],400,2,6.930000017746352e-05,18541
+Etapa 1,Forca Bruta O(n^2),400,3,0.0117973999986134,24514
+Etapa 1,Divisao e Conquista O(n log n),400,3,0.0009323000012955163,24514
+Etapa 1,Kadane O(n) [Desafio],400,3,7.389999882434495e-05,24514
+Etapa 1,Forca Bruta O(n^2),400,4,0.01114919999963604,9288
+Etapa 1,Divisao e Conquista O(n log n),400,4,0.0009046999985002913,9288
+Etapa 1,Kadane O(n) [Desafio],400,4,7.270000060088933e-05,9288
+Etapa 1,Forca Bruta O(n^2),400,5,0.010743399998318637,13421
+Etapa 1,Divisao e Conquista O(n log n),400,5,0.0008519000002706889,13421
+Etapa 1,Kadane O(n) [Desafio],400,5,6.790000043110922e-05,13421
+Etapa 1,Forca Bruta O(n^2),800,1,0.04560009999840986,39976
+Etapa 1,Divisao e Conquista O(n log n),800,1,0.0017523000024084467,39976
+Etapa 1,Kadane O(n) [Desafio],800,1,0.0001322999996773433,39976
+Etapa 1,Forca Bruta O(n^2),800,2,0.04618810000101803,35548
+Etapa 1,Divisao e Conquista O(n log n),800,2,0.001991900000575697,35548
+Etapa 1,Kadane O(n) [Desafio],800,2,0.00013380000018514693,35548
+Etapa 1,Forca Bruta O(n^2),800,3,0.04531640000277548,14861
+Etapa 1,Divisao e Conquista O(n log n),800,3,0.0017420999975001905,14861
+Etapa 1,Kadane O(n) [Desafio],800,3,0.00013949999993201345,14861
+Etapa 1,Forca Bruta O(n^2),800,4,0.047742399998242036,12553
+Etapa 1,Divisao e Conquista O(n log n),800,4,0.0018853000001399778,12553
+Etapa 1,Kadane O(n) [Desafio],800,4,0.00013939999917056412,12553
+Etapa 1,Forca Bruta O(n^2),800,5,0.04702069999984815,12974
+Etapa 1,Divisao e Conquista O(n log n),800,5,0.0020030999985465314,12974
+Etapa 1,Kadane O(n) [Desafio],800,5,0.00015110000094864517,12974
+Etapa 1,Forca Bruta O(n^2),1600,1,0.19518100000277627,13125
+Etapa 1,Divisao e Conquista O(n log n),1600,1,0.0037076999979035463,13125
+Etapa 1,Kadane O(n) [Desafio],1600,1,0.0003130000004603062,13125
+Etapa 1,Forca Bruta O(n^2),1600,2,0.19593209999948158,37932
+Etapa 1,Divisao e Conquista O(n log n),1600,2,0.0037439000006997958,37932
+Etapa 1,Kadane O(n) [Desafio],1600,2,0.00028470000324887224,37932
+Etapa 1,Forca Bruta O(n^2),1600,3,0.18873180000082357,37303
+Etapa 1,Divisao e Conquista O(n log n),1600,3,0.00369200000204728,37303
+Etapa 1,Kadane O(n) [Desafio],1600,3,0.0002708000029087998,37303
+Etapa 1,Forca Bruta O(n^2),1600,4,0.20367699999769684,22651
+Etapa 1,Divisao e Conquista O(n log n),1600,4,0.004323299999668961,22651
+Etapa 1,Kadane O(n) [Desafio],1600,4,0.00026530000104685314,22651
+Etapa 1,Forca Bruta O(n^2),1600,5,0.19215800000165473,25910
+Etapa 1,Divisao e Conquista O(n log n),1600,5,0.003966600001149345,25910
+Etapa 1,Kadane O(n) [Desafio],1600,5,0.0004141000026720576,25910
+Etapa 1,Forca Bruta O(n^2),3200,1,0.8031042000002344,70797
+Etapa 1,Divisao e Conquista O(n log n),3200,1,0.011302000002615387,70797
+Etapa 1,Kadane O(n) [Desafio],3200,1,0.0005559999990509823,70797
+Etapa 1,Forca Bruta O(n^2),3200,2,0.8033194999989064,69972
+Etapa 1,Divisao e Conquista O(n log n),3200,2,0.007389300000795629,69972
+Etapa 1,Kadane O(n) [Desafio],3200,2,0.000571600001421757,69972
+Etapa 1,Forca Bruta O(n^2),3200,3,0.8150018000014825,22703
+Etapa 1,Divisao e Conquista O(n log n),3200,3,0.0075241000013193116,22703
+Etapa 1,Kadane O(n) [Desafio],3200,3,0.0005894999994779937,22703
+Etapa 1,Forca Bruta O(n^2),3200,4,0.8096493999983068,36409
+Etapa 1,Divisao e Conquista O(n log n),3200,4,0.007550099999207305,36409
+Etapa 1,Kadane O(n) [Desafio],3200,4,0.000567600000067614,36409
+Etapa 1,Forca Bruta O(n^2),3200,5,0.7216397000011057,32788
+Etapa 1,Divisao e Conquista O(n log n),3200,5,0.007654400000319583,32788
+Etapa 1,Kadane O(n) [Desafio],3200,5,0.0005309000007400755,32788
+Etapa 1,Forca Bruta O(n^2),6400,1,3.253959899997426,85007
+Etapa 1,Divisao e Conquista O(n log n),6400,1,0.015246099999785656,85007
+Etapa 1,Kadane O(n) [Desafio],6400,1,0.0015168999998422805,85007
+Etapa 1,Forca Bruta O(n^2),6400,2,2.9369771999990917,43225
+Etapa 1,Divisao e Conquista O(n log n),6400,2,0.016416900001786416,43225
+Etapa 1,Kadane O(n) [Desafio],6400,2,0.0015844000008655712,43225
+Etapa 1,Forca Bruta O(n^2),6400,3,3.2412162000000535,81353
+Etapa 1,Divisao e Conquista O(n log n),6400,3,0.015210500001558103,81353
+Etapa 1,Kadane O(n) [Desafio],6400,3,0.0012830000014218967,81353
+Etapa 1,Forca Bruta O(n^2),6400,4,2.8843871999997646,31919
+Etapa 1,Divisao e Conquista O(n log n),6400,4,0.019030399998882785,31919
+Etapa 1,Kadane O(n) [Desafio],6400,4,0.0010662000022421125,31919
+Etapa 1,Forca Bruta O(n^2),6400,5,3.34759860000122,44230
+Etapa 1,Divisao e Conquista O(n log n),6400,5,0.01563199999873177,44230
+Etapa 1,Kadane O(n) [Desafio],6400,5,0.0011331999994581565,44230

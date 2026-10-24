@@ -1,0 +1,9 @@
+{
+    "processor": "AMD64 Family 23 Model 24 Stepping 1, AuthenticAMD",
+    "cpu_cores": "4 núcleos / 8 threads",
+    "ram": "16 GB DDR4",
+    "os": "Windows 11 (10.0.26200)",
+    "python_version": "3.12.10",
+    "python_implementation": "CPython",
+    "timestamp": "2026-11-06 16:54:34"
+}
