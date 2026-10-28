@@ -1,0 +1,293 @@
+================================================================================
+ARQUIVO DE CASOS DE TESTE - ENTRADAS E SAÍDAS ESPERADAS
+Trabalho Prático: Paradigma de Divisão e Conquista
+Alunos: Samuel Lopes e Rodrigo Temporal
+Disciplina: Análise e Projeto de Algoritmos (APA)
+================================================================================
+
+Este arquivo contém todos os casos de teste utilizados para validação das
+implementações das Etapas 1 e 2, incluindo justificativa teórica, formato de
+entrada e saída esperada para cada caso (com cobertura de 100% dos casos de borda).
+
+Convenção de Índices: 0-indexed (índices iniciam em 0 e vão até n-1).
+Regra de Desempate: Havendo empates na soma máxima, prioriza-se o intervalo de
+menor comprimento; persistindo, o de menor índice inicial.
+
+################################################################################
+PARTE 1: ETAPA 1 - SUBARRANJO DE SOMA MÁXIMA
+################################################################################
+
+--------------------------------------------------------------------------------
+CASO 1.1: Caso de Borda Obrigatório - Vetor com Apenas Números Negativos
+--------------------------------------------------------------------------------
+Justificativa:
+Quando todos os elementos são negativos, a soma de qualquer intervalo com mais
+de um número é menor do que selecionar individualmente o elemento de maior valor
+(menos negativo). O algoritmo não deve retornar 0 ou intervalo vazio, mas sim
+o elemento individual de maior valor (-2 no índice 1) e o intervalo [1, 1].
+
+Entrada:
+5
+-5 -2 -8 -12 -3
+
+Saída Esperada:
+Soma Máxima: -2
+Intervalo: [1, 1] (Início: 1, Fim: 1)
+Subarranjo: [-2]
+
+--------------------------------------------------------------------------------
+CASO 1.2: Caso de Borda Obrigatório - Vetor Unitário Positivo (n = 1)
+--------------------------------------------------------------------------------
+Justificativa:
+O menor vetor válido tem exatamente 1 elemento. Serve como caso base da recursão
+de divisão e conquista (low == high). Deve retornar o próprio elemento e [0, 0].
+
+Entrada:
+1
+42
+
+Saída Esperada:
+Soma Máxima: 42
+Intervalo: [0, 0] (Início: 0, Fim: 0)
+Subarranjo: [42]
+
+--------------------------------------------------------------------------------
+CASO 1.3: Caso de Borda Obrigatório - Vetor Unitário Negativo (n = 1)
+--------------------------------------------------------------------------------
+Justificativa:
+Combina tamanho unitário com valor negativo para testar condição de parada e
+inicialização correta de variáveis.
+
+Entrada:
+1
+-99
+
+Saída Esperada:
+Soma Máxima: -99
+Intervalo: [0, 0] (Início: 0, Fim: 0)
+Subarranjo: [-99]
+
+--------------------------------------------------------------------------------
+CASO 1.4: Caso de Borda Obrigatório - Empates com Mesma Soma Máxima
+--------------------------------------------------------------------------------
+Justificativa:
+Vetor possui dois ou mais subarranjos distintos que totalizam a mesma soma ótima.
+No vetor [3, -5, 3], tanto o elemento no índice 0 quanto o elemento no índice 2
+possuem soma 3. Pelo critério de desempate determinístico (menor tamanho e menor
+índice inicial), a resposta deve ser o índice 0.
+
+Entrada:
+3
+3 -5 3
+
+Saída Esperada:
+Soma Máxima: 3
+Intervalo: [0, 0] (Início: 0, Fim: 0)
+Subarranjo: [3]
+
+--------------------------------------------------------------------------------
+CASO 1.5: Caso Clássico da Literatura (Cormen - Introduction to Algorithms)
+--------------------------------------------------------------------------------
+Justificativa:
+Exemplo canônico de oscilação no mercado de ações, combinando sequências de
+quedas e altas expressivas. O subarranjo ótimo cruza o meio e se estende
+do índice 7 ao 10 ([18, 20, -7, 12]), com soma acumulada de 43.
+
+Entrada:
+16
+13 -3 -25 20 -3 -16 -23 18 20 -7 12 -5 -22 15 -4 7
+
+Saída Esperada:
+Soma Máxima: 43
+Intervalo: [7, 10] (Início: 7, Fim: 10)
+Subarranjo: [18, 20, -7, 12]
+
+--------------------------------------------------------------------------------
+CASO 1.6: Vetor com Todos os Valores Positivos
+--------------------------------------------------------------------------------
+Justificativa:
+Quando nenhum elemento é negativo, qualquer extensão de intervalo soma
+positivamente. A solução ótima é obrigatoriamente a totalidade do vetor [0, n-1].
+
+Entrada:
+6
+10 20 30 40 50 60
+
+Saída Esperada:
+Soma Máxima: 210
+Intervalo: [0, 5] (Início: 0, Fim: 5)
+Subarranjo: [10, 20, 30, 40, 50, 60]
+
+--------------------------------------------------------------------------------
+CASO 1.7: Vetor com Zeros Intermediários
+--------------------------------------------------------------------------------
+Justificativa:
+Testa se o algoritmo trata neutros aditivos sem estender indevidamente o tamanho
+mínimo do intervalo ótimo.
+
+Entrada:
+6
+0 -1 0 5 0 -2
+
+Saída Esperada:
+Soma Máxima: 5
+Intervalo: [3, 3] (Início: 3, Fim: 3)
+Subarranjo: [5]
+
+--------------------------------------------------------------------------------
+CASO 1.8: Alternância Simétrica de Ganhos e Perdas
+--------------------------------------------------------------------------------
+Justificativa:
+Vetor em que picos positivos são intercalados por vales de perdas menores, exigindo
+que o algoritmo avalie se compensa absorver perdas parciais para alcançar ganhos maiores.
+
+Entrada:
+8
+5 -2 8 -1 10 -20 4 2
+
+Saída Esperada:
+Soma Máxima: 20
+Intervalo: [0, 4] (Início: 0, Fim: 4)
+Subarranjo: [5, -2, 8, -1, 10]
+
+
+################################################################################
+PARTE 2: ETAPA 2 - PAR DE PONTOS MAIS PRÓXIMOS
+################################################################################
+
+Formato da Entrada:
+  Primeira linha: n (número inteiro de estações / pontos no plano).
+  Próximas n linhas: coordenadas x y separadas por espaço.
+
+Formato da Saída:
+  Distância euclidiana mínima com precisão decimal e o par de pontos correspondente.
+
+--------------------------------------------------------------------------------
+CASO 2.1: Caso Base Mínimo Absoluto (n = 2)
+--------------------------------------------------------------------------------
+Justificativa:
+O menor número possível de estações para formar um par. Garante que o caso base
+da recursão funcione sem gerar divisões infinitas ou erros de índice.
+
+Entrada:
+2
+1.0 2.0
+4.0 6.0
+
+Saída Esperada:
+Distância Mínima: 5.000000
+Par de Pontos: (1.0, 2.0) e (4.0, 6.0)
+
+--------------------------------------------------------------------------------
+CASO 2.2: Caso Base Mínimo da Divisão (n = 3)
+--------------------------------------------------------------------------------
+Justificativa:
+Com 3 pontos, a divisão ao meio divide o conjunto em partes desbalanceadas (1 e 2).
+É o limiar padrão clássico em que o algoritmo comuta para força bruta direta.
+
+Entrada:
+3
+0.0 0.0
+10.0 10.0
+0.0 1.0
+
+Saída Esperada:
+Distância Mínima: 1.000000
+Par de Pontos: (0.0, 0.0) e (0.0, 1.0)
+
+--------------------------------------------------------------------------------
+CASO 2.3: Caso de Borda Obrigatório - Pontos Coincidentes (Distância 0.0)
+--------------------------------------------------------------------------------
+Justificativa:
+Duas estações instaladas na mesma posição geográfica exata. A distância mínima
+deve ser computada como 0.0 sem causar divisões por zero ou quebras no algoritmo.
+
+Entrada:
+4
+5.0 5.0
+1.0 2.0
+5.0 5.0
+10.0 20.0
+
+Saída Esperada:
+Distância Mínima: 0.000000
+Par de Pontos: (5.0, 5.0) e (5.0, 5.0)
+
+--------------------------------------------------------------------------------
+CASO 2.4: Caso de Borda - Alinhamento Horizontal (Mesma Coordenada Y)
+--------------------------------------------------------------------------------
+Justificativa:
+Quando todas as estações estão sobre a mesma reta horizontal (y constante), todas
+as diferenças em y são nulas. Testa a partição da faixa e o critério de 7 vizinhos
+quando múltiplos pontos possuem o mesmo y.
+
+Entrada:
+4
+10.0 5.0
+2.0 5.0
+4.5 5.0
+20.0 5.0
+
+Saída Esperada:
+Distância Mínima: 2.500000
+Par de Pontos: (2.0, 5.0) e (4.5, 5.0)
+
+--------------------------------------------------------------------------------
+CASO 2.5: Caso de Borda - Alinhamento Vertical (Mesma Coordenada X)
+--------------------------------------------------------------------------------
+Justificativa:
+Quando múltiplos pontos compartilham a mesma coordenada x, a mediana divide pontos
+com o mesmo x entre o lado esquerdo e direito. Testa o desempate na ordenação por x.
+
+Entrada:
+4
+3.0 15.0
+3.0 -2.0
+3.0 0.0
+3.0 100.0
+
+Saída Esperada:
+Distância Mínima: 2.000000
+Par de Pontos: (3.0, -2.0) e (3.0, 0.0)
+
+--------------------------------------------------------------------------------
+CASO 2.6: Coordenadas em Múltiplos Quadrantes com Valores Negativos e Decimais
+--------------------------------------------------------------------------------
+Justificativa:
+Estações situadas em diferentes quadrantes cartesianos, testando a robustez dos
+cálculos com sinais negativos e aproximações de ponto flutuante.
+
+Entrada:
+5
+-100.5 -200.75
+50.25 30.10
+-100.2 -200.75
+0.0 0.0
+12.5 -4.8
+
+Saída Esperada:
+Distância Mínima: 0.300000
+Par de Pontos: (-100.5, -200.75) e (-100.2, -200.75)
+
+--------------------------------------------------------------------------------
+CASO 2.7: Par Crítico Cruzando a Linha Mediana
+--------------------------------------------------------------------------------
+Justificativa:
+A distância mínima entre pontos puramente da esquerda é 5.0, e puramente da
+direita é 5.0, mas existe um par posicionado a apenas 0.4 unidades de distância
+cujos pontos estão um de cada lado da mediana vertical (x = 10.0). Exige que
+o passo da faixa (strip) identifique o par corretamente.
+
+Entrada:
+6
+2.0 20.0
+2.0 25.0
+9.8 15.0
+10.2 15.0
+18.0 30.0
+18.0 35.0
+
+Saída Esperada:
+Distância Mínima: 0.400000
+Par de Pontos: (9.8, 15.0) e (10.2, 15.0)
+================================================================================
